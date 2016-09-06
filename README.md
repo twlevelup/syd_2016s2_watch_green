@@ -24,6 +24,9 @@ See the [Installation Instructions](https://github.com/twlevelup/watch_edition/w
 4. Fix any errors
 5. ```git push```
 
+## Green team members go here
+* Joel Davison - Sampha(GitHub)
+* Jessica May - more-like-a-puma(GitHub)
 
 ### Checking the build status
 
@@ -33,7 +36,3 @@ To view the build status and get notifications about the build status:
 2. Add the XML config to CCTray or CCMenu on your dev machine
 
 You can also access the CI server and view the status of the build here [Snap CI](https://snap-ci.com/twlevelup/watch_edition/branch/master?notice=watch_edition)
-
-#Team Name
-- Lucas Vilela 
-- Clinton Hadinata
