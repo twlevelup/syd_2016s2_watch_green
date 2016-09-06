@@ -6,6 +6,7 @@ module.exports = {
   team: require('./teamPage'),
   home: require('./homePage'),
   contacts: require('./contactsPage'),
+  demo: require('./demoPage'),
   eventsList: require('./eventsList'),
   eventDetails: require('./eventDetails')
 };
