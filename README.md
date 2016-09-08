@@ -24,8 +24,8 @@ See the [Installation Instructions](https://github.com/twlevelup/watch_edition/w
 ```./go pre-commit``` (OS X)  
 ```npm -s run test``` (Windows)  
 ```docker-compose -f docker-compose.test.yml up``` (Docker)
-4. Fix any errors
-5. Run ```git push```
+5. Fix any errors
+6. Run ```git push```
 
 ## Green team members go here
 * Joel Davison - Sampha(GitHub)
