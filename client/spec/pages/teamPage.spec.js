@@ -1,7 +1,7 @@
 'use strict';
 
 var TeamPage = require('../../src/js/pages/teamPage'),
-    page;
+  page;
 
 describe('Check-in dance', function() {
 
@@ -23,6 +23,9 @@ describe('Check-in dance', function() {
     it('should include Clinton and Lillian\'s name in README', function() {
       expect(page.$el).toContainText('Clinton');
       expect(page.$el).toContainText('Lillian');
+      expect(page.$el).toContainText('Lucas Vilela');
+      expect(page.$el).toContainText('Joseph');
+
     });
 
   });
