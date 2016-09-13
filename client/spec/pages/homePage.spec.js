@@ -16,7 +16,7 @@ describe('The Home Page', function() {
   describe('button event handlers', function() {
 
     describe('right', function() {
-
+      // This v should change to take a user to the menu page
       it('should take the user to the contacts page', function() {
         spyOn(window.App, 'navigate');
         page.configureButtons();
@@ -44,6 +44,7 @@ describe('The Home Page', function() {
     });
 
     describe('left', function() {
+      // From the home page left shouldn't go anywhere
       it('should take the user to the demo page', function() {
           spyOn(window.App, 'navigate');
           page.configureButtons();
@@ -58,7 +59,7 @@ describe('The Home Page', function() {
 
     it('should produce the correct HTML', function() {
       page.render();
-      expect(page.$el).toContainText('Hello, World!');
+      expect(page.$el).toContainText('Hello, Lucy!');
     });
 
     it('returns the view object', function() {
