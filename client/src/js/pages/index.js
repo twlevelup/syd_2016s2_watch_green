@@ -8,5 +8,6 @@ module.exports = {
   contacts: require('./contactsPage'),
   demo: require('./demoPage'),
   eventsList: require('./eventsList'),
-  eventDetails: require('./eventDetails')
+  eventDetails: require('./eventDetails'),
+  menu: require('./menuPage')
 };

@@ -9,15 +9,15 @@ var homePage = Page.extend({
   template: require('../../templates/pages/home.hbs'),
 
   buttonEvents: {
-    right: 'goToContacts',
+    right: 'goToMenuPage',
     top: 'scrollUp',
     bottom: 'scrollDown',
     left: 'goToMyDemoPage'
 
   },
 
-  goToContacts: function() {
-    window.App.navigate('contacts');
+  goToMenuPage: function() {
+    window.App.navigate('menu');
   },
 
   goToMyDemoPage: function() {

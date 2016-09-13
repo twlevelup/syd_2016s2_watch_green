@@ -17,11 +17,11 @@ describe('The Home Page', function() {
 
     describe('right', function() {
       // This v should change to take a user to the menu page
-      it('should take the user to the contacts page', function() {
+      it('should take the user to the main menu', function() {
         spyOn(window.App, 'navigate');
         page.configureButtons();
         eventHub.trigger('right');
-        expect(window.App.navigate).toHaveBeenCalledWith('contacts');
+        expect(window.App.navigate).toHaveBeenCalledWith('menu');
       });
     });
 
