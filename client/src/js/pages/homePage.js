@@ -13,6 +13,7 @@ var homePage = Page.extend({
     top: 'scrollUp',
     bottom: 'scrollDown',
     left: 'goToMyDemoPage'
+
   },
 
   goToContacts: function() {
@@ -24,11 +25,15 @@ var homePage = Page.extend({
   },
 
   scrollUp: function() {
-    $('#watch-face').animate({scrollTop: '-=70px'});
+    $('#watch-face').animate({
+      scrollTop: '-=70px'
+    });
   },
 
   scrollDown: function() {
-    $('#watch-face').animate({scrollTop: '+=70px'});
+    $('#watch-face').animate({
+      scrollTop: '+=70px'
+    });
   },
 
   render: function() {

@@ -41,15 +41,17 @@ describe('The Home Page', function() {
         eventHub.trigger('bottom');
         expect(page.scrollDown).toHaveBeenCalled();
       });
+
     });
 
     describe('left', function() {
       it('should take the user to the demo page', function() {
-          spyOn(window.App, 'navigate');
-          page.configureButtons();
-          eventHub.trigger('left');
-          expect(window.App.navigate).toHaveBeenCalledWith('demo');
-        });
+
+        spyOn(window.App, 'navigate');
+        page.configureButtons();
+        eventHub.trigger('left');
+        expect(window.App.navigate).toHaveBeenCalledWith('demo');
+      });
     });
 
   });
