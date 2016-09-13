@@ -24,6 +24,7 @@ describe('Check-in dance', function() {
       expect(page.$el).toContainText('Clinton');
       expect(page.$el).toContainText('Lillian');
       expect(page.$el).toContainText('Lucas Vilela');
+      expect(page.$el).toContainText('Joseph');
 
     });
 
