@@ -8,9 +8,9 @@ var demoPage = Page.extend({
     render: function() {
         this.$el.html(this.template({name: 'John Smith'}));
         return this;
-    },
+      },
 
     template: require('../../templates/pages/demo.hbs')
-});
+  });
 
 module.exports = demoPage;

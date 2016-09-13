@@ -7,7 +7,7 @@ describe('The Demo Page', function() {
 
     beforeEach(function() {
         page = new DemoPage();
-    });
+      });
 
     describe('rendering', function() {
 
@@ -27,4 +27,4 @@ describe('The Demo Page', function() {
       });
 
     });
-});
+  });
