@@ -20,5 +20,10 @@ describe('Check-in dance', function() {
       expect(page.$el).toContainText('Jess/Joel');
     });
 
+    it('should include Clinton and Lillian\'s name in README', function() {
+      expect(page.$el).toContainText('Clinton');
+      expect(page.$el).toContainText('Lillian');
+    });
+
   });
 });
