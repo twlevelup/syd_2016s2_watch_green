@@ -16,12 +16,12 @@ describe('The Home Page', function() {
   describe('button event handlers', function() {
 
     describe('right', function() {
-      // This v should change to take a user to the menu page
-      it('should take the user to the main menu', function() {
+      // This v should change to take a user to the eventsList page
+      it('should take the user to the eventsList menu', function() {
         spyOn(window.App, 'navigate');
         page.configureButtons();
         eventHub.trigger('right');
-        expect(window.App.navigate).toHaveBeenCalledWith('menu');
+        expect(window.App.navigate).toHaveBeenCalledWith('eventsList');
       });
     });
 
