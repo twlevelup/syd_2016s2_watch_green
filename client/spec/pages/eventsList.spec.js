@@ -51,6 +51,16 @@ describe('The Events List', function() {
 
   });
 
+  describe('menu items', function() {
+      it('should contain the required menu items', function() {
+          page.render();
+          expect(page.$el).toContainText('Alarm');
+          expect(page.$el).toContainText('Check-In');
+          expect(page.$el).toContainText('Score');
+        });
+
+    });
+
   describe('select', function() {
     it('navigates to the event details page for the selected event', function() {
       var cid = 'c42';
