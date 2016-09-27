@@ -19,18 +19,30 @@ describe('The CHECK IN page', function() {
       page.render();
       expect(page.$el).toContainHtml('<h1>Press the screen to Enter your password mode</h1>');
     });
+  });
 
 
-    describe('button events', function() {
-      describe('face', function() {
-        it('should go into password entry mode', function() {
-          page.configureButtons();
-          eventHub.trigger('face');
-          expect(page.checkInputMode()).toBeTruthy();
-        });
+  describe('button events', function() {
+    describe('face', function() {
+      it('should go into password entry mode', function() {
+        page.configureButtons();
+        eventHub.trigger('face');
+        expect(page.checkInputMode()).toBeTruthy();
       });
-
+      it('should display "You are in password entry mode. Use up/down/left/right buttons to enter password."', function() {
+        page.inputMode = true;
+        page.render();
+        expect(page.$el).toContainHtml('<h1>Enter the password</h1>');
+      });
     });
+  });
 
+
+  describe('Up', function() {
+    it('should append "U" to the input password array', function() {
+      page.configureButtons();
+      eventHub.trigger('up');
+      expect(page.inputPassword[page.inputPassword.length - 1]).toEqual('U');
+    });
   });
 });

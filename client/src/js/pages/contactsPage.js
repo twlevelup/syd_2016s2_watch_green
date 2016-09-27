@@ -25,11 +25,17 @@ var contactsPage = Page.extend({
 
   // TODO use jquery to load a JSON file async test?
   seedContacts: function() {
-    this.contactsCollection.reset([
-      {name: 'Adam', phoneNumber: '0431 111 111'},
-      {name: 'James', phoneNumber: '0431 222 222'},
-      {name: 'Marzena', phoneNumber: '0431 333 333'}
-    ]);
+    this.contactsCollection.reset([{
+      name: 'Adam',
+      phoneNumber: '0431 111 111'
+    }, {
+      name: 'James',
+      phoneNumber: '0431 222 222'
+    }, {
+      name: 'Marzena',
+      phoneNumber: '0431 333 333'
+    }]);
+    console.log("test");
   },
 
   screenClickExample: function() {
@@ -56,11 +62,11 @@ var contactsPage = Page.extend({
   },
 
   createContactHTML: function(contact) {
-      var view = new ContactView({
-        model: contact
-      });
-      return view.render().el;
-    }
+    var view = new ContactView({
+      model: contact
+    });
+    return view.render().el;
+  }
 
 });
 
