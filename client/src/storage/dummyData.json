@@ -1,0 +1,44 @@
+[
+ {
+   "Date": "09/27/16",
+   "Morning": true,
+   "Noon": true,
+   "Eve": true
+ },
+ {
+   "Date": "09/28/16",
+   "Morning": true,
+   "Noon": true,
+   "Eve": true
+ },
+ {
+   "Date": "09/29/16",
+   "Morning": true,
+   "Noon": true,
+   "Eve": true
+ },
+ {
+   "Date": "09/30/16",
+   "Morning": true,
+   "Noon": true,
+   "Eve": true
+ },
+ {
+   "Date": "10/01/16",
+   "Morning": true,
+   "Noon": true,
+   "Eve": true
+ },
+ {
+   "Date": "10/02/16",
+   "Morning": true,
+   "Noon": true,
+   "Eve": true
+ },
+ {
+   "Date": "10/03/16",
+   "Morning": true,
+   "Noon": true,
+   "Eve": true
+ }
+]
