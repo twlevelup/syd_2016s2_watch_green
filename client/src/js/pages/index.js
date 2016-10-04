@@ -11,4 +11,5 @@ module.exports = {
   eventDetails: require('./eventDetails'),
   menu: require('./menuPage'),
   checkin: require('./checkInPage')
+  viewProgress: require('./viewProgressPage')
 };
