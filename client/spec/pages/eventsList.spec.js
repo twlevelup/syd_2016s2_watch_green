@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var EventsList = require('../../src/js/pages/eventsList'),
   App = require('../../src/js/app'),
