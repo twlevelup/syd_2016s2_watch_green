@@ -1,44 +1,44 @@
 [
  {
-   "Date": "09/27/16",
-   "Morning": true,
-   "Noon": true,
-   "Eve": true
+   "date": "09/27/16",
+   "morning": true,
+   "noon": true,
+   "eve": true
  },
  {
-   "Date": "09/28/16",
-   "Morning": true,
-   "Noon": true,
-   "Eve": true
+   "date": "09/28/16",
+   "morning": true,
+   "noon": true,
+   "eve": true
  },
  {
-   "Date": "09/29/16",
-   "Morning": true,
-   "Noon": true,
-   "Eve": true
+   "date": "09/29/16",
+   "morning": true,
+   "noon": true,
+   "eve": true
  },
  {
-   "Date": "09/30/16",
-   "Morning": true,
-   "Noon": true,
-   "Eve": true
+   "date": "09/30/16",
+   "morning": true,
+   "noon": true,
+   "eve": true
  },
  {
-   "Date": "10/01/16",
-   "Morning": true,
-   "Noon": true,
-   "Eve": true
+   "date": "10/01/16",
+   "morning": true,
+   "noon": true,
+   "eve": true
  },
  {
-   "Date": "10/02/16",
-   "Morning": true,
-   "Noon": true,
-   "Eve": true
+   "date": "10/02/16",
+   "morning": true,
+   "noon": true,
+   "eve": true
  },
  {
-   "Date": "10/03/16",
-   "Morning": true,
-   "Noon": true,
-   "Eve": true
+   "date": "10/03/16",
+   "morning": true,
+   "noon": true,
+   "eve": true
  }
 ]
