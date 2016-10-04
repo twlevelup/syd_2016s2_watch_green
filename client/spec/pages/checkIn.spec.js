@@ -21,7 +21,6 @@ describe('The CHECK IN page', function() {
     });
   });
 
-
   describe('button events', function() {
     describe('face', function() {
       it('should go into password entry mode', function() {
@@ -29,6 +28,7 @@ describe('The CHECK IN page', function() {
         eventHub.trigger('face');
         expect(page.checkInputMode()).toBeTruthy();
       });
+
       it('should display "You are in password entry mode. Use up/down/left/right buttons to enter password."', function() {
         page.inputMode = true;
         page.render();
@@ -36,7 +36,6 @@ describe('The CHECK IN page', function() {
       });
     });
   });
-
 
   describe('Up', function() {
     it('should append "U" to the input password array', function() {

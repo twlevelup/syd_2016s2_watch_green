@@ -35,7 +35,6 @@ var contactsPage = Page.extend({
       name: 'Marzena',
       phoneNumber: '0431 333 333'
     }]);
-    console.log("test");
   },
 
   screenClickExample: function() {
