@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 var EventsList = require('../../src/js/pages/eventsList'),
   App = require('../../src/js/app'),
@@ -57,6 +57,7 @@ describe('The Events List', function() {
           expect(page.$el).toContainText('Alarm');
           expect(page.$el).toContainText('Check-In');
           expect(page.$el).toContainText('Score');
+          expect(page.$el).toContainText('Attendance Rate');
         });
 
     });
