@@ -2,6 +2,7 @@
 'use strict';
 
 var Page = require('watch_framework').Page;
+var inputPassword = [];
 
 var passwordEntryPage = Page.extend({
 
@@ -10,8 +11,8 @@ var passwordEntryPage = Page.extend({
   template: require('../../templates/pages/passwordEntry.hbs'),
 
   buttonEvents: {
-    up: 'appendUpToArray',
-    down: 'appendDownToArray',
+    top: 'appendUpToArray',
+    bottom: 'appendDownToArray',
     right: 'appendRightToArray',
     left: 'navigateToCheckInPage'
   },
@@ -25,18 +26,34 @@ var passwordEntryPage = Page.extend({
 
   initialize: function() {
     this.inputPassword = [];
-  },
-
-  appendDownToArray: function() {
-    this.inputPassword.push('D');
+    this.hardcodedPassword = ['U','R','D','D'];
   },
 
   appendUpToArray: function() {
     this.inputPassword.push('U');
+    this.checkPassword();
+  },
+
+  appendDownToArray: function() {
+    this.inputPassword.push('D');
+    this.checkPassword();
   },
 
   appendRightToArray: function() {
     this.inputPassword.push('R');
+    this.checkPassword();
+  },
+
+  checkPassword: function() {
+    if (this.inputPassword.toString() === this.hardcodedPassword.toString()) {
+      this.navigateToPointsPage();
+    } else if (this.inputPassword.length === 4) {
+      this.inputPassword = [];
+    }
+  },
+
+  navigateToPointsPage: function() {
+    window.App.navigate('points');
   },
 
   navigateToCheckInPage: function() {

@@ -20,7 +20,7 @@ describe('The password entry page', function() {
   describe('Up', function() {
     it('should append "U" to the input password array', function() {
       page.configureButtons();
-      eventHub.trigger('up');
+      eventHub.trigger('top');
       expect(page.inputPassword[page.inputPassword.length - 1]).toEqual('U');
     });
   });
@@ -28,7 +28,7 @@ describe('The password entry page', function() {
   describe('Down', function() {
     it('should append "D" to the input password array', function() {
       page.configureButtons();
-      eventHub.trigger('down');
+      eventHub.trigger('bottom');
       expect(page.inputPassword[page.inputPassword.length - 1]).toEqual('D');
     });
   });
@@ -47,6 +47,22 @@ describe('The password entry page', function() {
       page.configureButtons();
       eventHub.trigger('left');
       expect(window.App.navigate).toHaveBeenCalledWith('checkin');
+    });
+  });
+
+  describe('password checking', function() {
+    it('should navigate to points page if password is correct', function() {
+      spyOn(window.App, 'navigate');
+      page.inputPassword = ['U','R','D','D'];
+      page.checkPassword();
+      expect(window.App.navigate).toHaveBeenCalledWith('points');
+    });
+
+    it('should reset inputPassword array if entered password is 4 characters long and is incorrect', function() {
+      spyOn(window.App, 'navigate');
+      page.inputPassword = ['D','R','D','R'];
+      page.checkPassword();
+      expect(page.inputPassword).toEqual([]);
     });
   });
 

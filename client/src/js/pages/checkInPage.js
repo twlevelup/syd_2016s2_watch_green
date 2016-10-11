@@ -10,18 +10,17 @@ var checkInPage = Page.extend({
   template: require('../../templates/pages/checkInPage.hbs'),
 
   buttonEvents: {
-    face: 'navigateToPasswordEntry',
-    up: 'appendUpToArray'
+    face: 'navigateToPasswordEntry'
   },
 
   initialize: function() {
-    this.inputPassword = [];
+    // this.inputPassword = [];
     this.inputMode = false;
   },
 
-  appendUpToArray: function() {
-    this.inputPassword.push('U');
-  },
+  // appendUpToArray: function() {
+  //   this.inputPassword.push('U');
+  // },
 
   navigateToPasswordEntry: function() {
       window.App.navigate('passwordEntry');
