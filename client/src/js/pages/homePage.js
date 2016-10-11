@@ -11,8 +11,7 @@ var homePage = Page.extend({
   buttonEvents: {
     right: 'goToEventsList',
     top: 'scrollUp',
-    bottom: 'scrollDown',
-    left: 'goToMyDemoPage'
+    bottom: 'scrollDown'
 
   },
 

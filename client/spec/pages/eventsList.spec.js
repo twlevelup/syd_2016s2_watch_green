@@ -54,7 +54,6 @@ describe('The Events List', function() {
   describe('menu items', function() {
       it('should contain the required menu items', function() {
           page.render();
-          expect(page.$el).toContainText('Alarm');
           expect(page.$el).toContainText('Check-In');
           expect(page.$el).toContainText('Score');
           expect(page.$el).toContainText('Attendance Rate');
