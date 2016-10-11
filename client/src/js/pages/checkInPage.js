@@ -10,7 +10,7 @@ var checkInPage = Page.extend({
   template: require('../../templates/pages/checkInPage.hbs'),
 
   buttonEvents: {
-    face: 'toggleInputMode',
+    face: 'navigateToPasswordEntry',
     up: 'appendUpToArray'
   },
 
@@ -23,14 +23,9 @@ var checkInPage = Page.extend({
     this.inputPassword.push('U');
   },
 
-  toggleInputMode: function() {
-    inputMode = !inputMode;
-    if (inputMode === false) {
-      passwordScreenMessage = 'Press the screen to Enter your password mode';
-    } else {
-      passwordScreenMessage = 'Enter the password';
-    }
-  },
+  navigateToPasswordEntry: function() {
+      window.App.navigate('passwordEntry');
+    },
 
   render: function() {
     if (inputMode === true) {
