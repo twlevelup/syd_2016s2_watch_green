@@ -10,6 +10,6 @@ module.exports = {
   eventsList: require('./eventsList'),
   eventDetails: require('./eventDetails'),
   menu: require('./menuPage'),
-  checkin: require('./checkInPage')
+  checkin: require('./checkInPage'),
   viewProgress: require('./viewProgressPage')
 };

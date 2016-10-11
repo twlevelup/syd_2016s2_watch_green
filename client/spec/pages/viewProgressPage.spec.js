@@ -34,8 +34,9 @@ describe('The viewProgress Page', function() {
     });
 
     it('should produce the correct score.', function() {
+      page.score = 56;
       page.render();
-      expect(page.$el).toContainHtml('<h1>0</h1>');
+      expect(page.$el).toContainHtml('<h1>56</h1>');
     });
 
     it('Should display 20 if score=20', function() {

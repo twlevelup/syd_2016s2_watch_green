@@ -14,7 +14,6 @@ var viewProgressPage = Page.extend({
 
   initialize: function() {
     this.score = 0;
-    console.log("Hello!");
     this.render();
   },
 
@@ -23,7 +22,7 @@ var viewProgressPage = Page.extend({
   },
 
   render: function() {
-    this.$el.html(this.template({score : 0}));
+    this.$el.html(this.template({score : this.score}));
     return this;
   }
 

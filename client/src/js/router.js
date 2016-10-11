@@ -4,7 +4,10 @@ var Router = Backbone.Router.extend({
 
   routes: {
     'viewProgress': 'showViewProgress',
-    'eventDetails/:id': 'showEventDetails',
+    // 'eventDetails/:id': 'showEventDetails',
+    'eventDetails/c1': 'alarm',
+    'eventDetails/c2': 'showCheckIn',
+    'eventDetails/c3': 'showViewProgress',
     '*other': 'defaultRoute'
   },
 
@@ -23,8 +26,12 @@ var Router = Backbone.Router.extend({
     window.App.showPage(page);
   },
 
+  showCheckIn: function() {
+    window.App.showPage(this.pages.checkin);
+  },
+
   showViewProgress: function() {
-    window.App.showPage(this.pages.viewProgressPage);
+    window.App.showPage(this.pages.viewProgress);
   },
 
   showEventDetails: function(id) {
