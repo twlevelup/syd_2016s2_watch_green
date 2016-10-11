@@ -1,6 +1,6 @@
 'use strict';
 
-var viewProgressPage = require('../../src/js/pages/viewProgressPage'),
+var ViewProgressPage = require('../../src/js/pages/viewProgressPage'),
   App = require('../../src/js/app'),
   eventHub = require('watch_framework').EventHub,
   page;
@@ -8,7 +8,7 @@ var viewProgressPage = require('../../src/js/pages/viewProgressPage'),
 describe('The viewProgress Page', function() {
 
   beforeEach(function() {
-    page = new viewProgressPage();
+    page = new ViewProgressPage();
   });
 
   describe('button events', function() {
@@ -44,7 +44,6 @@ describe('The viewProgress Page', function() {
       page.render();
       expect(page.$el).toContainHtml('<h1>20</h1>');
     });
-
 
     // it('should render each of the contacts', function() {
     //   spyOn(page, 'createContactHTML');

@@ -26,7 +26,6 @@ var eventsList = Menu.extend({
     // TODO move showPage in to the router, might be able to get rid of the activePage stuff too
     // TODO include it at the top level instead of inside the app?
     window.App.navigate('eventDetails/' + this.selected.cid);
-    console.log(this.selected);
   },
 
   collection: storage.eventsData

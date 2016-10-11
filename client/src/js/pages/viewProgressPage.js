@@ -9,7 +9,7 @@ var viewProgressPage = Page.extend({
   template: require('../../templates/pages/viewProgress.hbs'),
 
   buttonEvents: {
-    left: 'goToHomePage',
+    left: 'goToHomePage'
   },
 
   initialize: function() {
@@ -22,7 +22,7 @@ var viewProgressPage = Page.extend({
   },
 
   render: function() {
-    this.$el.html(this.template({score : this.score}));
+    this.$el.html(this.template({score: this.score}));
     return this;
   }
 

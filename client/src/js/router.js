@@ -3,7 +3,8 @@
 var Router = Backbone.Router.extend({
 
   routes: {
-    'viewProgress': 'showViewProgress',
+    viewProgress: 'showViewProgress',
+
     // 'eventDetails/:id': 'showEventDetails',
     'eventDetails/c1': 'alarm',
     'eventDetails/c2': 'showCheckIn',
@@ -37,8 +38,6 @@ var Router = Backbone.Router.extend({
   showEventDetails: function(id) {
     window.App.showPage(this.pages.eventDetails, {cid: id});
   }
-
-
 
 });
 
