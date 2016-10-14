@@ -14,12 +14,33 @@ var passwordEntryPage = Page.extend({
     top: 'appendUpToArray',
     bottom: 'appendDownToArray',
     right: 'appendRightToArray',
-    left: 'navigateToCheckInPage'
+    left: 'appendLeftToArray',
+    face: 'navigateToCheckInPage'
   },
 
   render: function() {
 
-    this.$el.html(this.template());
+    if (this.asterisksCount === 1) {
+      this.$el.html(this.template({
+        asterisks: '* _ _ _',
+      }));
+    } else if (this.asterisksCount === 2) {
+      this.$el.html(this.template({
+        asterisks: '* * _ _',
+      }));
+    } else if (this.asterisksCount === 3) {
+      this.$el.html(this.template({
+        asterisks: '* * * _',
+      }));
+    } else if (this.asterisksCount === 4) {
+      this.$el.html(this.template({
+        asterisks: '* * * *',
+      }));
+    } else {
+      this.$el.html(this.template({
+        asterisks: '_ _ _ _',
+      }));
+    }
 
     return this;
   },
@@ -27,21 +48,35 @@ var passwordEntryPage = Page.extend({
   initialize: function() {
     this.inputPassword = [];
     this.hardcodedPassword = ['U','R','D','D'];
+    this.asterisksCount = 0;
   },
 
   appendUpToArray: function() {
     this.inputPassword.push('U');
+    this.asterisksCount++;
     this.checkPassword();
+    this.render();
   },
 
   appendDownToArray: function() {
     this.inputPassword.push('D');
+    this.asterisksCount++;
     this.checkPassword();
+    this.render();
   },
 
   appendRightToArray: function() {
     this.inputPassword.push('R');
+    this.asterisksCount++;
     this.checkPassword();
+    this.render();
+  },
+
+  appendLeftToArray: function() {
+    this.inputPassword.push('L');
+    this.asterisksCount++;
+    this.checkPassword();
+    this.render();
   },
 
   checkPassword: function() {
@@ -49,6 +84,7 @@ var passwordEntryPage = Page.extend({
       this.navigateToPointsPage();
     } else if (this.inputPassword.length === 4) {
       this.inputPassword = [];
+      this.asterisksCount = 0;
     }
   },
 
