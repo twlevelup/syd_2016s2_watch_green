@@ -9,8 +9,13 @@ var checkInPage = Page.extend({
   template: require('../../templates/pages/checkInPage.hbs'),
 
   buttonEvents: {
-    face: 'navigateToPasswordEntry'
+    face: 'navigateToPasswordEntry',
+    left: 'navigateToEventsList'
   },
+
+  navigateToEventsList: function () {
+      window.App.navigate('eventsList');
+    },
 
   navigateToPasswordEntry: function() {
       window.App.navigate('passwordEntry');

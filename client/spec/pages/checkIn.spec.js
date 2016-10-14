@@ -23,6 +23,15 @@ describe('The CHECK IN page', function() {
 
   describe('button events', function() {
 
+    describe('left', function() {
+      it('should navigate back to the menu list page', function() {
+        spyOn(window.App, 'navigate');
+        page.configureButtons();
+        eventHub.trigger('left');
+        expect(window.App.navigate).toHaveBeenCalledWith('eventsList');
+      })
+    });
+
     describe('face', function() {
         it('should navigate to password entry page', function() {
             spyOn(window.App, 'navigate');
