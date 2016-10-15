@@ -29,7 +29,7 @@ describe('The CHECK IN page', function() {
         page.configureButtons();
         eventHub.trigger('left');
         expect(window.App.navigate).toHaveBeenCalledWith('eventsList');
-      })
+      });
     });
 
     describe('face', function() {
