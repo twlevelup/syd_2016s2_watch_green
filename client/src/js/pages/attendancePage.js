@@ -25,10 +25,12 @@ var viewAttendancePage = Page.extend({
       this.$el.html(this.template({moodMessage: 'Congratulations!'}));
       this.$el.find('#mood-face').addClass('fa-smile-o');
     }
+
     if (mood === 'medium') {
       this.$el.html(this.template({moodMessage: 'You are Ok, not great. '}));
       this.$el.find('#mood-face').addClass('fa-meh-o');
     }
+
     if (mood === 'low') {
       this.$el.html(this.template({moodMessage: 'Your daughter needs more attention.'}));
       this.$el.find('#mood-face').addClass('fa-frown-o');
@@ -36,8 +38,9 @@ var viewAttendancePage = Page.extend({
 
     return this;
   },
-  getMood: function(){
-    return  attendanceService.getColour();
+
+  getMood: function() {
+    return attendanceService.getColour();
   }
 });
 

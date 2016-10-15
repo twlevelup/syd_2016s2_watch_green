@@ -56,7 +56,7 @@ describe('The Events List', function() {
           page.render();
           expect(page.$el).toContainText('Check-In');
           expect(page.$el).toContainText('Points');
-          expect(page.$el).toContainText('Attendance Rate');
+          expect(page.$el).toContainText('Parent');
         });
 
     });
