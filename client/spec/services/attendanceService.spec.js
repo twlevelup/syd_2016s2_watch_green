@@ -3,8 +3,8 @@
 var AttendanceService = require('../../src/services/attendanceService');
 
 describe('Attendance Service', function() {
-  describe('#attedanceRate', function() {
-    describe('when lucy attends 3 days out of 6 sessions', function() {
+  describe('#attendanceRate', function() {
+    describe('when lucy attends 3 sessions out of 6 sessions', function() {
       it('should return 0.5', function() {
         var dummyData = [
           {
@@ -70,5 +70,27 @@ describe('Attendance Service', function() {
       expect(attendanceService.getColour()).toEqual('low');
     });
 
+  });
+
+  describe('#getPoints', function() {
+    describe('when lucy attends 2 sessions out of 6 sessions', function() {
+      it('should return 2', function() {
+        var dummyData = [
+            {
+            date: '09/27/16',
+            morning: false,
+            noon: false,
+            eve: true
+        },
+        {
+            date: '09/28/16',
+            morning: false,
+            noon: false,
+            eve: true
+        }];
+        var attendanceService = new AttendanceService(dummyData);
+        expect(attendanceService.getAttendanceRate()).toEqual(0.5);
+      });
+    });
   });
 });
