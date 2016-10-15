@@ -15,9 +15,16 @@ describe('The ATTENDANCE PAGE', function() {
 
   describe('Rendering', function() {
 
-    it('Should print Hello World in the page', function() {
+    it('Should print the correct message for high in the page', function() {
+      spyOn(page, 'getMood').and.returnValue('high');
       page.render();
-      expect(page.$el).toContainHtml('<h1>Hello World</h1>');
+      expect(page.$el).toContainHtml('<div>Congratulations!</div>');
+    });
+
+    it('Should print the correct message for low in the page', function() {
+      spyOn(page, 'getMood').and.returnValue('low');
+      page.render();
+      expect(page.$el).toContainHtml('<div>Your daughter needs more attention.</div>');
     });
   });
 
