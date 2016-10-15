@@ -5,7 +5,6 @@ var moment = require('moment');
 var Page = require('watch_framework').Page;
 var AttendanceService = require('../../services/attendanceService');
 
-
 var viewProgressPage = Page.extend({
 
   id: 'viewProgress',

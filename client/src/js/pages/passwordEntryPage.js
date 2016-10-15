@@ -5,7 +5,6 @@ var Page = require('watch_framework').Page;
 var inputPassword = [];
 var AttendanceService = require('../../services/attendanceService');
 
-
 var passwordEntryPage = Page.extend({
 
   id: 'passwordEntry',
