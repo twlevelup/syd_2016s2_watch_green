@@ -35,8 +35,7 @@ var viewAttendancePage = Page.extend({
     }
 
     return this;
-  }
-
+  },
   getMood: function(){
     return  attendanceService.getColour();
   }
