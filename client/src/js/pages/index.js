@@ -12,5 +12,6 @@ module.exports = {
   menu: require('./menuPage'),
   checkin: require('./checkInPage'),
   viewProgress: require('./viewProgressPage'),
-  passwordEntry: require('./passwordEntryPage')
+  passwordEntry: require('./passwordEntryPage'),
+  viewAttendance: require('./attendancePage')
 };
