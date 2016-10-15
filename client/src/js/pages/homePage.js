@@ -3,7 +3,6 @@
 var Page = require('watch_framework').Page;
 var AttendanceService = require('../../services/attendanceService');
 var Data = require('json!../../storage/dummyData.json');
-var _ = require('lodash');
 
 var attendanceCssClassMap = {
   low: 'lowAttendance',

@@ -1,6 +1,10 @@
 'use strict';
 
+var moment = require('moment');
+
 var Page = require('watch_framework').Page;
+var AttendanceService = require('../../services/attendanceService');
+var Data = require('json!../../storage/dummyData.json');
 
 var viewProgressPage = Page.extend({
 
@@ -13,7 +17,10 @@ var viewProgressPage = Page.extend({
   },
 
   initialize: function() {
-    this.score = 0;
+    this.attendanceService = new AttendanceService(Data.attendance);
+    this.score = this.attendanceService.getPoints();
+    this.day = this.attendanceService.getRecentDay();
+
     this.render();
   },
 
@@ -22,7 +29,8 @@ var viewProgressPage = Page.extend({
   },
 
   render: function() {
-    this.$el.html(this.template({score: this.score}));
+    this.dayOfWeek = moment(this.day.date).format('dddd');
+    this.$el.html(this.template({score: this.score, dayOfWeek: this.dayOfWeek, day: this.day}));
     return this;
   }
 

@@ -10,6 +10,7 @@ var Router = Backbone.Router.extend({
     'eventDetails/c2': 'showViewProgress',
     'eventDetails/c3': 'showViewAttendance',
     'passwordEntryPage': 'showPasswordEntry',
+
     '*other': 'defaultRoute'
   },
 

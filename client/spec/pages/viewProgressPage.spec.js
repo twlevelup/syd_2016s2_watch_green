@@ -34,23 +34,16 @@ describe('The viewProgress Page', function() {
     });
 
     it('should produce the correct score.', function() {
-      page.score = 56;
-      page.render();
-      expect(page.$el).toContainHtml('<h1>56</h1>');
-    });
+        page.score = 56;
+        page.render();
+        expect(page.$el).toContainHtml('<h1>56</h1>');
+      });
 
     it('Should display 20 if score=20', function() {
-      page.score = 20;
-      page.render();
-      expect(page.$el).toContainHtml('<h1>20</h1>');
-    });
-
-    // it('should render each of the contacts', function() {
-    //   spyOn(page, 'createContactHTML');
-    //   page.contactsCollection.reset([{}, {}, {}, {}]);
-    //   page.render();
-    //   expect(page.createContactHTML.calls.count()).toEqual(4);
-    // });
+        page.score = 20;
+        page.render();
+        expect(page.$el).toContainHtml('<h1>20</h1>');
+      });
 
     it('returns the view object', function() {
       expect(page.render()).toEqual(page);
