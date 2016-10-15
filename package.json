@@ -22,6 +22,8 @@
     "css-loader": "^0.23.1",
     "envify": "^3.4.0",
     "file-loader": "^0.8.5",
+    "font-awesome": "^4.6.3",
+    "font-awesome-webpack-sass": "0.0.3",
     "generator-watch-page": "git+https://643af40aaeabd70576e5491b6724e7c8a1088dd7:x-oauth-basic@github.com/twlevelup/generator-watch-edition#0.3",
     "handlebars": "^4.0.5",
     "handlebars-template-loader": "^0.6.0",

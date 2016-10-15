@@ -1,5 +1,7 @@
 'use strict';
 
+require('font-awesome-webpack-sass');
+
 var watchFramework = require('watch_framework');
 var Router = require('./router');
 var WatchFace = watchFramework.WatchFace;
