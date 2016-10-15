@@ -10,4 +10,6 @@ var App = require('./app'),
 var notificationsForm = new NotificationsForm();
 notificationsForm.configureNotifications(notificationsFormConfig);
 
+// var data = require('../services/data');
+// data.init();
 App.start();

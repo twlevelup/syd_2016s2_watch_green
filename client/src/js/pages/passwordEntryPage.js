@@ -3,6 +3,8 @@
 
 var Page = require('watch_framework').Page;
 var inputPassword = [];
+var AttendanceService = require('../../services/attendanceService');
+
 
 var passwordEntryPage = Page.extend({
 
@@ -81,6 +83,7 @@ var passwordEntryPage = Page.extend({
 
   checkPassword: function() {
     if (this.inputPassword.toString() === this.hardcodedPassword.toString()) {
+      new AttendanceService().addAttendence();
       this.navigateToPointsPage();
     } else if (this.inputPassword.length === 4) {
       this.inputPassword = [];
@@ -89,7 +92,7 @@ var passwordEntryPage = Page.extend({
   },
 
   navigateToPointsPage: function() {
-    window.App.navigate('points');
+    window.App.navigate('viewProgress');
   },
 
   navigateToCheckInPage: function() {

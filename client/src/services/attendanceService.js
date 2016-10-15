@@ -2,8 +2,10 @@
 
 
 var DAYS_OF_WEEK = 5;
-
-var AttendanceService = function(days) {
+var _ = require('lodash');
+var storage = require('./data');
+var days = require('json!../storage/dummyData.json').attendance;
+var AttendanceService = function() {
 
   this.getNPoints = function(listOfDays) {
       if (listOfDays.length === 0) {
@@ -25,6 +27,7 @@ var AttendanceService = function(days) {
   }
 
   this.getAttendanceRate = function() {
+    console.log("days===============>",days);
     if (days.length === 0) {
       return 0;
     }
@@ -56,6 +59,29 @@ var AttendanceService = function(days) {
   this.getRecentDay = function() {
       return days[days.length-1];
   }
+
+  this.addAttendence = function(){
+    var last = days[days.length-1];
+    if(!last.morning){
+      last.morning=true;
+      return;
+    }else if(!last.noon){
+      last.noon=true;
+      return;
+    }else if(!last.eve){
+      last.eve = true;
+      return;
+    }else{
+      days.push({
+        "date": "15/10/16",
+        "morning": true,
+        "noon": false,
+        "eve":false
+      });
+    }
+  }
+
+
 };
 
 

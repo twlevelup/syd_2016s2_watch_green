@@ -2,7 +2,7 @@
 
 var Page = require('watch_framework').Page;
 var AttendanceService = require('../../services/attendanceService');
-var Data = require('json!../../storage/dummyData.json');
+var _ = require('lodash');
 
 var attendanceCssClassMap = {
   low: 'lowAttendance',
@@ -54,7 +54,7 @@ var homePage = Page.extend({
   },
 
   render: function() {
-    var colour = new AttendanceService(Data).getColour();
+    var colour = new AttendanceService().getColour();
     this.$el.html(this.template());
     var homePageWrapper = $('#watch');
     _.forEach(attendanceCssClassMap, function(className, key) {

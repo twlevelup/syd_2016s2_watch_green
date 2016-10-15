@@ -63,7 +63,7 @@ describe('The password entry page', function() {
       spyOn(window.App, 'navigate');
       page.inputPassword = ['U','R','D','D'];
       page.checkPassword();
-      expect(window.App.navigate).toHaveBeenCalledWith('points');
+      expect(window.App.navigate).toHaveBeenCalledWith('viewProgress');
     });
 
     it('should reset inputPassword array if entered password is 4 characters long and is incorrect', function() {

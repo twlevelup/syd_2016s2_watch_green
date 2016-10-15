@@ -4,7 +4,7 @@ var moment = require('moment');
 
 var Page = require('watch_framework').Page;
 var AttendanceService = require('../../services/attendanceService');
-var Data = require('json!../../storage/dummyData.json');
+
 
 var viewProgressPage = Page.extend({
 
@@ -17,7 +17,7 @@ var viewProgressPage = Page.extend({
   },
 
   initialize: function() {
-    this.attendanceService = new AttendanceService(Data.attendance);
+    this.attendanceService = new AttendanceService();
     this.score = this.attendanceService.getPoints();
     this.day = this.attendanceService.getRecentDay();
 
