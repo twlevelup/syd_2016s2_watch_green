@@ -2,7 +2,17 @@
 <h2>Score</h2>
 <h1>{{ score }}</h1>
 <h2>{{ dayOfWeek }}</h2>
-<h3>Morning: <input type="checkbox" {{ day.morning }} disabled ></h3>
-<h3>Noon: <input type="checkbox" {{ day.noon }} disabled></h3>
-<h3>Evening: <input type="checkbox" {{ day.eve }} disabled></h3>
+
+<table width="100%">
+    <tr>
+        <th>MORNING</th>
+        <th>NOON</th>
+        <th>EVENING</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" {{ day.morning }} disabled ></td>
+        <td><input type="checkbox" {{ day.noon }} disabled></td>
+        <td><input type="checkbox" {{ day.eve }} disabled></td>
+    </tr>
+</table>
 </center>
