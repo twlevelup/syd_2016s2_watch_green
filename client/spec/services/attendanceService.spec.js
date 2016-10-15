@@ -52,25 +52,25 @@ describe('Attendance Service', function() {
                   });
               });
 
-  describe('#getColour', function() {
-    it('should return "green" if 80%', function() {
-      var attendanceService = new AttendanceService();
-      spyOn(attendanceService, 'getAttendanceRate').and.returnValue(0.8);
-      expect(attendanceService.getColour()).toEqual('high');
-    });
+          describe('#getColour', function() {
+                      it('should return "green" if 80%', function() {
+                        var attendanceService = new AttendanceService();
+                        spyOn(attendanceService, 'getAttendanceRate').and.returnValue(0.8);
+                        expect(attendanceService.getColour()).toEqual('high');
+                      });
 
-    it('should return "yellow" if 30%', function() {
-      var attendanceService = new AttendanceService();
-      spyOn(attendanceService, 'getAttendanceRate').and.returnValue(0.3);
-      expect(attendanceService.getColour()).toEqual('medium');
-    });
+                      it('should return "yellow" if 30%', function() {
+                        var attendanceService = new AttendanceService();
+                        spyOn(attendanceService, 'getAttendanceRate').and.returnValue(0.3);
+                        expect(attendanceService.getColour()).toEqual('medium');
+                      });
 
-    it('should return "orange" if 0%', function() {
-      var attendanceService = new AttendanceService();
-      spyOn(attendanceService, 'getAttendanceRate').and.returnValue(0);
-      expect(attendanceService.getColour()).toEqual('low');
-    });
-            });
+                      it('should return "orange" if 0%', function() {
+                        var attendanceService = new AttendanceService();
+                        spyOn(attendanceService, 'getAttendanceRate').and.returnValue(0);
+                        expect(attendanceService.getColour()).toEqual('low');
+                      });
+                    });
 
           describe('#getPoints', function() {
                 describe('when lucy attends 2 sessions out of 6 sessions', function() {

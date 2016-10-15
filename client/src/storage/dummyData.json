@@ -37,8 +37,8 @@
  },
  {
    "date": "10/03/16",
-   "morning": true,
-   "noon": true,
+   "morning": false,
+   "noon": false,
    "eve": true
  }
 ]}

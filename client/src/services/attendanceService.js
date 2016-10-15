@@ -58,4 +58,5 @@ var AttendanceService = function(days) {
   }
 };
 
+
 module.exports = AttendanceService;

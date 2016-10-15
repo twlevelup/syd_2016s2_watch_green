@@ -7,15 +7,15 @@ var page;
 var AttendancePage = require('../../src/js/pages/attendancePage');
 var eventHub = require('watch_framework').EventHub;
 
-describe('The ATTENDANCE PAGE',function () {
+describe('The ATTENDANCE PAGE', function() {
 
-  beforeEach(function () {
+  beforeEach(function() {
     page = new AttendancePage();
   });
 
-  describe('Rendering', function () {
+  describe('Rendering', function() {
 
-    it('Should print Hello World in the page', function () {
+    it('Should print Hello World in the page', function() {
       page.render();
       expect(page.$el).toContainHtml('<h1>Hello World</h1>');
     });
@@ -32,7 +32,6 @@ describe('The ATTENDANCE PAGE',function () {
         expect(window.App.navigate).toHaveBeenCalledWith('eventsList');
       });
     });
-
 
   });
 

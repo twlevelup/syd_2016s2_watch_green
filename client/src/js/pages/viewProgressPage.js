@@ -30,6 +30,9 @@ var viewProgressPage = Page.extend({
 
   render: function() {
     this.dayOfWeek = moment(this.day.date).format('dddd');
+    this.day.morning = this.day.morning ? 'checked' : '';
+    this.day.noon = this.day.noon ? 'checked' : '';
+    this.day.eve = this.day.eve ? 'checked' : '';
     this.$el.html(this.template({score: this.score, dayOfWeek: this.dayOfWeek, day: this.day}));
     return this;
   }
