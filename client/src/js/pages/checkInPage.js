@@ -29,7 +29,7 @@ var checkInPage = Page.extend({
 
     return this;
 
-  },
+  }
 
 });
 module.exports = checkInPage;

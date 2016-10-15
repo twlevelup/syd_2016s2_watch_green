@@ -22,23 +22,23 @@ var passwordEntryPage = Page.extend({
 
     if (this.asterisksCount === 1) {
       this.$el.html(this.template({
-        asterisks: '* _ _ _',
+        asterisks: '* _ _ _'
       }));
     } else if (this.asterisksCount === 2) {
       this.$el.html(this.template({
-        asterisks: '* * _ _',
+        asterisks: '* * _ _'
       }));
     } else if (this.asterisksCount === 3) {
       this.$el.html(this.template({
-        asterisks: '* * * _',
+        asterisks: '* * * _'
       }));
     } else if (this.asterisksCount === 4) {
       this.$el.html(this.template({
-        asterisks: '* * * *',
+        asterisks: '* * * *'
       }));
     } else {
       this.$el.html(this.template({
-        asterisks: '_ _ _ _',
+        asterisks: '_ _ _ _'
       }));
     }
 
@@ -53,28 +53,28 @@ var passwordEntryPage = Page.extend({
 
   appendUpToArray: function() {
     this.inputPassword.push('U');
-    this.asterisksCount++;
+    this.asterisksCount += 1;
     this.checkPassword();
     this.render();
   },
 
   appendDownToArray: function() {
     this.inputPassword.push('D');
-    this.asterisksCount++;
+    this.asterisksCount += 1;
     this.checkPassword();
     this.render();
   },
 
   appendRightToArray: function() {
     this.inputPassword.push('R');
-    this.asterisksCount++;
+    this.asterisksCount += 1;
     this.checkPassword();
     this.render();
   },
 
   appendLeftToArray: function() {
     this.inputPassword.push('L');
-    this.asterisksCount++;
+    this.asterisksCount += 1;
     this.checkPassword();
     this.render();
   },

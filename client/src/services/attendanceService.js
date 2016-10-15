@@ -25,14 +25,17 @@ var AttendanceService = function(days) {
   this.getColour = function() {
     var attendRate = this.getAttendanceRate();
     if (attendRate >= 0.8) {
-      return '#3EA329';
+      // return '#3EA329';
+      return 'high';
     }
 
     if (attendRate >= 0.3) {
-      return '#F5CC23';
+      // return '#F5CC23';
+      return 'medium';
     }
 
-    return '#E7502B';
+    // return '#E7502B';
+    return 'low';
   }
 
 };

@@ -8,7 +8,7 @@ var Router = Backbone.Router.extend({
     // 'eventDetails/:id': 'showEventDetails',
     'eventDetails/c1': 'showCheckIn',
     'eventDetails/c2': 'showViewProgress',
-    'passwordEntryPage': 'showPasswordEntry',
+    passwordEntryPage: 'showPasswordEntry',
     '*other': 'defaultRoute'
   },
 

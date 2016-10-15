@@ -55,19 +55,19 @@ describe('Attendance Service', function() {
     it('should return "green" if 80%', function() {
       var attendanceService = new AttendanceService();
       spyOn(attendanceService, 'getAttendanceRate').and.returnValue(0.8);
-      expect(attendanceService.getColour()).toEqual('#3EA329');
+      expect(attendanceService.getColour()).toEqual('high');
     });
 
     it('should return "yellow" if 30%', function() {
       var attendanceService = new AttendanceService();
       spyOn(attendanceService, 'getAttendanceRate').and.returnValue(0.3);
-      expect(attendanceService.getColour()).toEqual('#F5CC23');
+      expect(attendanceService.getColour()).toEqual('medium');
     });
 
     it('should return "orange" if 0%', function() {
       var attendanceService = new AttendanceService();
       spyOn(attendanceService, 'getAttendanceRate').and.returnValue(0);
-      expect(attendanceService.getColour()).toEqual('#E7502B');
+      expect(attendanceService.getColour()).toEqual('low');
     });
 
   });

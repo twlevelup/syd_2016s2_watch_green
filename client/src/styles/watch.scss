@@ -11,13 +11,37 @@
   top: 30px;
   left: 20px;
   display: block;
-  overflow: scroll;
+  // overflow: scroll;
 }
 
 #watch{
   background-color: #3F484A;
   display: inline-block;
   vertical-align: top;
+}
+
+.clock-time {
+    font-size: 40px;
+}
+
+.clock-date {
+    font-size: 18px;
+}
+
+.lowAttendance{
+  background-color: #E7502B !important;
+}
+
+.mediumAttendance{
+  background-color: #F5CC23 !important;
+}
+
+.highAttendance {
+  background-color: #3EA329 !important;
+}
+
+li {
+  font-size: 24px
 }
 
 .watch{

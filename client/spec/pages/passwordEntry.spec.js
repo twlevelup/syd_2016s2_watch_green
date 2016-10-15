@@ -42,10 +42,18 @@ describe('The password entry page', function() {
   });
 
   describe('Left', function() {
+    it('should append "L" to the input password array', function() {
+      page.configureButtons();
+      eventHub.trigger('left');
+      expect(page.inputPassword[page.inputPassword.length - 1]).toEqual('L');
+    });
+  });
+
+  describe('Face', function() {
     it('should navigate back to checkin page', function() {
       spyOn(window.App, 'navigate');
       page.configureButtons();
-      eventHub.trigger('left');
+      eventHub.trigger('face');
       expect(window.App.navigate).toHaveBeenCalledWith('checkin');
     });
   });
