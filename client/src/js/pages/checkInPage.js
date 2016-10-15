@@ -13,7 +13,7 @@ var checkInPage = Page.extend({
     left: 'navigateToEventsList'
   },
 
-  navigateToEventsList: function () {
+  navigateToEventsList: function() {
       window.App.navigate('eventsList');
     },
 

@@ -22,14 +22,15 @@ var homePage = Page.extend({
     right: 'goToEventsList',
     top: 'scrollUp',
     bottom: 'scrollDown'
-
   },
 
   goToEventsList: function() {
+    this.removeCssClasses();
     window.App.navigate('eventsList');
   },
 
   goToMyDemoPage: function() {
+    this.removeCssClasses();
     window.App.navigate('demo');
   },
 
@@ -43,6 +44,14 @@ var homePage = Page.extend({
     $('#watch-face').animate({
       scrollTop: '+=70px'
     });
+  },
+
+  removeCssClasses: function() {
+    this.$el.html(this.template());
+    var homePageWrapper = $('#watch');
+    _.forEach(attendanceCssClassMap, function(className, key) {
+        homePageWrapper.removeClass(className);
+      });
   },
 
   render: function() {

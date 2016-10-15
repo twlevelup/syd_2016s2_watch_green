@@ -23,6 +23,14 @@ describe('The Home Page', function() {
         eventHub.trigger('right');
         expect(window.App.navigate).toHaveBeenCalledWith('eventsList');
       });
+
+      it('should remove css classes', function() {
+        spyOn(page, 'removeCssClasses');
+        page.configureButtons();
+        eventHub.trigger('right');
+        expect(page.removeCssClasses).toHaveBeenCalled();
+      });
+
     });
 
     describe('top', function() {
